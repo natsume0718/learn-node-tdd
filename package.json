@@ -5,6 +5,10 @@
   "author": "natsume0718 <moto718program@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.13.13",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",

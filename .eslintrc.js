@@ -14,4 +14,8 @@ module.exports = {
       },
     ],
   },
+  parserOptions: {
+    sourceType: 'module',
+  },
+  ignorePatterns: ['**/tests/**'],
 };
