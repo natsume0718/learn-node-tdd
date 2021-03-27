@@ -15,13 +15,11 @@ describe('add', () => {
 
     test('add max arg', () => {
         const arr = Array(31).fill(1);
-        const result = add(...arr)
-        expect(result).toThrow("over limit argument")
+        expect(() => add(...arr)).toThrow("over limit argument")
     });
 
     test('pass multiple mold', () => {
-        const result = add(1, 5, "aa")
-        expect(result).toThrow("error only accept number")
+        expect(() => add(1, 5, "aa")).toThrow("error only accept number")
     });
 
     test('normal add', () => {
