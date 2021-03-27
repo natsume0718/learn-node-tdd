@@ -2,4 +2,15 @@ export function add() {
   if (30 < arguments.length) {
     throw new Error('over limit argument');
   }
+  let sum = Array.from(arguments).reduce((previous, current) => {
+    if (typeof current !== 'number') {
+      throw new Error('error only accept number');
+    }
+    return previous + current;
+  });
+
+  if (1000 < sum) {
+    return 'too big';
+  }
+  return sum;
 }

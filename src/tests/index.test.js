@@ -2,9 +2,9 @@ import { add } from '../index';
 
 describe('add', () => {
     test('over 1000', () => {
-        const result = add(999, 1)
-        expect(result).not.toBe(1000)
-        expect(result).stringMatching('too big')
+        const result = add(1000, 1)
+        expect(result).not.toBe(1001)
+        expect(result).toBe('too big')
     });
 
     test('add max -1 arg', () => {
