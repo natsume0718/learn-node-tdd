@@ -49,3 +49,9 @@ export function subtract() {
   }
   return subtract;
 }
+
+export function divide() {
+  if (30 < arguments.length) {
+    throw new Error('over limit argument');
+  }
+}
