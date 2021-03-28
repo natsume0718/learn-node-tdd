@@ -34,4 +34,8 @@ export function multiply() {
   return multiply;
 }
 
-export function subtract() {}
+export function subtract() {
+  if (30 < arguments.length) {
+    throw new Error('over limit argument');
+  }
+}
