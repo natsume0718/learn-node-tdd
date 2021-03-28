@@ -1,4 +1,4 @@
-import { add, multiply } from '../index';
+import { add, multiply, subtract } from '../index';
 
 describe('add', () => {
     test('over 1000', () => {
@@ -53,5 +53,33 @@ describe('multiply', () => {
     test('normal multiply', () => {
         const result = multiply(2, 5)
         expect(result).toBe(10);
+    })
+});
+
+describe('subtract', () => {
+    test('nagative', () => {
+        const result = subtract(10, 2, 3, 10)
+        expect(result).not.toBe(-5)
+        expect(result).toBe('negative number')
+    });
+
+    test('subtract max -1 arg', () => {
+        const arr = Array(30).fill(1);
+        const result = subtract(...arr)
+        expect(result).toBe(-29)
+    });
+
+    test('subtract max arg', () => {
+        const arr = Array(31).fill(2);
+        expect(() => subtract(...arr)).toThrow("over limit argument")
+    });
+
+    test('pass multiple mold', () => {
+        expect(() => subtract(1, 5, "aa")).toThrow("error only accept number")
+    });
+
+    test('normal subtract', () => {
+        const result = subtract(10, 2, 3)
+        expect(result).toBe(5);
     })
 });
