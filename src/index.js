@@ -38,4 +38,11 @@ export function subtract() {
   if (30 < arguments.length) {
     throw new Error('over limit argument');
   }
+  let subtract = Array.from(arguments).reduce((previous, current) => {
+    if (typeof current !== 'number') {
+      throw new Error('error only accept number');
+    }
+    return previous - current;
+  });
+  return subtract;
 }
