@@ -44,5 +44,8 @@ export function subtract() {
     }
     return previous - current;
   });
+  if (subtract < 0) {
+    return 'negative number';
+  }
   return subtract;
 }
