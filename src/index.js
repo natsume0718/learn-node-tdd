@@ -24,6 +24,7 @@ export function multiply() {
     if (typeof current !== 'number') {
       throw new Error('error only accept number');
     }
+    return previous * current;
   });
   return multiply;
 }
