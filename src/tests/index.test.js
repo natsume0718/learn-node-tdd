@@ -1,4 +1,4 @@
-import { add, multiply, subtract } from '../index';
+import { add, multiply, subtract, divide } from '../index';
 
 describe('add', () => {
     test('over 1000', () => {
@@ -81,5 +81,36 @@ describe('subtract', () => {
     test('normal subtract', () => {
         const result = subtract(10, 2, 3)
         expect(result).toBe(5);
+    })
+});
+describe('divide', () => {
+    test('0 divide', () => {
+        const result = divide(10, 0)
+        expect(result).toBe('cant divide with 0')
+    });
+
+    test('divide max -1 arg', () => {
+        const arr = Array(30).fill(100, 0, 1).fill(1, 1, 30);
+        const result = divide(...arr)
+        expect(result).toBe(100)
+    });
+
+    test('divide max arg', () => {
+        const arr = Array(31).fill(2);
+        expect(() => divide(...arr)).toThrow("over limit argument")
+    });
+
+    test('pass multiple mold', () => {
+        expect(() => divide(10, 2, "aa")).toThrow("error only accept number")
+    });
+
+    test('normal divide', () => {
+        const result = divide(10, 2, 4)
+        expect(result).toBe(1.25);
+    })
+
+    test('Round divide', () => {
+        const result = divide(10, 3)
+        expect(result).toBe(3.333);
     })
 });
