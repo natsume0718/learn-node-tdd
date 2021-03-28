@@ -26,5 +26,10 @@ export function multiply() {
     }
     return previous * current;
   });
+
+  if (1000 < multiply) {
+    return 'big big number';
+  }
+
   return multiply;
 }

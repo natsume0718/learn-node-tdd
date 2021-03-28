@@ -36,9 +36,9 @@ describe('multiply', () => {
     });
 
     test('multiply max -1 arg', () => {
-        const arr = Array(30).fill(2);
+        const arr = Array(30).fill(1);
         const result = multiply(...arr)
-        expect(result).toBe(Math.pow(2, 30))
+        expect(result).toBe(Math.pow(1, 30))
     });
 
     test('multiply max arg', () => {
