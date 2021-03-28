@@ -33,3 +33,5 @@ export function multiply() {
 
   return multiply;
 }
+
+export function subtract() {}
