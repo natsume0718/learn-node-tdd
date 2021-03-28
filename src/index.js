@@ -14,3 +14,5 @@ export function add() {
   }
   return sum;
 }
+
+export function multiply() {}
