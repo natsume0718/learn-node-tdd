@@ -110,6 +110,6 @@ describe('divide', () => {
 
     test('Round divide', () => {
         const result = divide(10, 3)
-        expect(result).toBe(3.333);
+        expect(result).toBe(3.33);
     })
 });

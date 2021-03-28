@@ -61,5 +61,7 @@ export function divide() {
     if (current === 0) {
       throw new Error('cant divide with 0');
     }
+    return Math.floor((previous / current) * 100) / 100;
   });
+  return divide;
 }
