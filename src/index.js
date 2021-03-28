@@ -19,4 +19,11 @@ export function multiply() {
   if (30 < arguments.length) {
     throw new Error('over limit argument');
   }
+
+  let multiply = Array.from(arguments).reduce((previous, current) => {
+    if (typeof current !== 'number') {
+      throw new Error('error only accept number');
+    }
+  });
+  return multiply;
 }
