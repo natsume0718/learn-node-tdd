@@ -64,9 +64,9 @@ describe('subtract', () => {
     });
 
     test('subtract max -1 arg', () => {
-        const arr = Array(30).fill(1);
+        const arr = Array(30).fill(100, 0, 1).fill(1, 1, 30);
         const result = subtract(...arr)
-        expect(result).toBe(-29)
+        expect(result).toBe(71)
     });
 
     test('subtract max arg', () => {
