@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "natsume0718 <moto718program@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@babel/core": "^7.13.13",
     "@babel/polyfill": "^7.12.1",

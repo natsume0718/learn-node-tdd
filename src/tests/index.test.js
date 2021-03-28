@@ -1,4 +1,4 @@
-import { add, multiply, subtract, divide } from '../index';
+import { add, multiply, subtract, divide } from '../index.js';
 
 describe('add', () => {
     test('over 1000', () => {
