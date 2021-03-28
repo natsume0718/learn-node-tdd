@@ -15,4 +15,8 @@ export function add() {
   return sum;
 }
 
-export function multiply() {}
+export function multiply() {
+  if (30 < arguments.length) {
+    throw new Error('over limit argument');
+  }
+}
