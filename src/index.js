@@ -54,4 +54,12 @@ export function divide() {
   if (30 < arguments.length) {
     throw new Error('over limit argument');
   }
+  let divide = Array.from(arguments).reduce((previous, current) => {
+    if (typeof current !== 'number') {
+      throw new Error('error only accept number');
+    }
+    if (current === 0) {
+      throw new Error('cant divide with 0');
+    }
+  });
 }

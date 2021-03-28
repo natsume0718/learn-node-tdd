@@ -85,8 +85,7 @@ describe('subtract', () => {
 });
 describe('divide', () => {
     test('0 divide', () => {
-        const result = divide(10, 0)
-        expect(result).toBe('cant divide with 0')
+        expect(() => divide(10, 0)).toThrow('cant divide with 0')
     });
 
     test('divide max -1 arg', () => {
